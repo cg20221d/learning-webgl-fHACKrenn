@@ -56,9 +56,36 @@ function main() {
         0.55, 0.35,
     ];
 
+    var vertices7 = [
+        0.4, 0.9,
+        0.45, 0.8,
+        0.55, 0.8,
+        0.6, 0.9,
+        0.55, 1.0,
+        0.45, 1.0,
+    ];
+
+    var vertices8 = [
+        0.4, 0.45,
+        0.45, 0.35,
+        0.55, 0.35,
+        0.6, 0.45,
+        0.55, 0.55,
+        0.45, 0.55,
+    ];
+
+    var vertices9 = [
+        0.4, 0.0,
+        0.45, -0.1,
+        0.55, -0.1,
+        0.6, 0.0,
+        0.55, 0.1,
+        0.45, 0.1,
+    ];
+
     var buffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices6), gl.STATIC_DRAW);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices9), gl.STATIC_DRAW);
 
     // Vertex shader
     var vertexShaderCode =  `
