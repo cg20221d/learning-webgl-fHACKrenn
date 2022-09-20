@@ -63,6 +63,88 @@ function main() {
         0.6, 0.0,
         0.55, 0.1,
         0.45, 0.1,
+
+        //A
+        -0.6, -0.1,
+        -0.55, -0.2,
+        -0.45, -0.2,
+        -0.4, -0.1,
+        -0.6, -0.1,
+
+        -0.6, -0.1,
+        -0.65, -0.2,
+        -0.65, -0.45,
+        -0.6, -0.55,
+        -0.55, -0.45,
+        -0.55, -0.2,
+        -0.6, -0.1,
+
+        -0.6, -0.55,
+        -0.65, -0.65,
+        -0.65, -0.9,
+        -0.6, -1.0,
+        -0.55, -0.9,
+        -0.55, -0.65,
+        -0.6, -0.55,
+
+        -0.4, -0.1,
+        -0.45, -0.2,
+        -0.45, -0.45,
+        -0.4, -0.55,
+        -0.35, -0.45,
+        -0.35, -0.2,
+        -0.4, -0.1,
+
+        -0.4, -0.55,
+        -0.45, -0.65,
+        -0.45, -0.9,
+        -0.4, -1.0,
+        -0.35, -0.9,
+        -0.35, -0.65,
+        -0.4, -0.55,
+
+        -0.6, -0.55,
+        -0.55, -0.45,
+        -0.45, -0.45,
+        -0.4, -0.55,
+        -0.45, -0.65,
+        -0.55, -0.65,
+
+        //H
+        0.4, -0.1,
+        0.45, -0.2,
+        0.45, -0.45,
+        0.4, -0.55,
+        0.35, -0.45,
+        0.35, -0.2,
+
+        0.4, -0.55,
+        0.45, -0.65,
+        0.45, -0.9,
+        0.4, -1.0,
+        0.35, -0.9,
+        0.35, -0.65,
+
+        0.6, -0.1,
+        0.65, -0.2,
+        0.65, -0.45,
+        0.6, -0.55,
+        0.55, -0.45,
+        0.55, -0.2,
+
+        0.6, -0.55,
+        0.65, -0.65,
+        0.65, -0.9,
+        0.6, -1.0,
+        0.55, -0.9,
+        0.55, -0.65,
+
+        0.4, -0.55,
+        0.45, -0.65,
+        0.55, -0.65,
+        0.6, -0.55,
+        0.55, -0.45,
+        0.45, -0.45,
     ];
 
     var buffer = gl.createBuffer();
@@ -115,22 +197,27 @@ function main() {
     gl.clear(gl.COLOR_BUFFER_BIT);
 
     gl.drawArrays(gl.LINE_LOOP, 0, 6);
-    gl.drawArrays(gl.LINES, 6, 6);
     gl.drawArrays(gl.LINE_LOOP, 6, 6);
-    gl.drawArrays(gl.LINES, 6, 6);
 
     gl.drawArrays(gl.LINE_LOOP, 12, 6);
-    gl.drawArrays(gl.LINES, 6, 6);
     gl.drawArrays(gl.LINE_LOOP, 18, 6);
-    gl.drawArrays(gl.LINES, 6, 6);
     gl.drawArrays(gl.LINE_LOOP, 24, 6);
-    gl.drawArrays(gl.LINES, 6, 6);
     gl.drawArrays(gl.LINE_LOOP, 30, 6);
-    gl.drawArrays(gl.LINES, 6, 6);
     gl.drawArrays(gl.LINE_LOOP, 36, 4);
-    gl.drawArrays(gl.LINES, 4, 4);
     gl.drawArrays(gl.LINE_LOOP, 40, 6);
-    gl.drawArrays(gl.LINES, 6, 6);
     gl.drawArrays(gl.LINE_LOOP, 46, 4);
-    gl.drawArrays(gl.LINES, 4, 4);
+ 
+    gl.drawArrays(gl.TRIANGLE_STRIP, 50, 5);
+    gl.drawArrays(gl.TRIANGLE_FAN, 55, 7);
+    gl.drawArrays(gl.TRIANGLE_FAN, 62, 7);
+    gl.drawArrays(gl.TRIANGLE_FAN, 69, 7);
+    gl.drawArrays(gl.TRIANGLE_FAN, 76, 7);
+    gl.drawArrays(gl.TRIANGLE_FAN, 83, 6);
+
+    gl.drawArrays(gl.TRIANGLE_FAN, 89, 6);
+    gl.drawArrays(gl.TRIANGLE_FAN, 95, 6);
+    gl.drawArrays(gl.TRIANGLE_FAN, 101, 6);
+    gl.drawArrays(gl.TRIANGLE_FAN, 107, 6);
+    gl.drawArrays(gl.TRIANGLE_FAN, 113, 6);
+    
 }
