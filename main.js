@@ -110,6 +110,14 @@ function main() {
         -0.45, -0.65,
         -0.55, -0.65,
 
+        -0.65, -0.45,
+        -0.6, -0.55,
+        -0.65, -0.65,
+
+        -0.4, -0.55,
+        -0.35, -0.45,
+        -0.35, -0.65,
+
         //H
         0.4, -0.1,
         0.45, -0.2,
@@ -145,6 +153,14 @@ function main() {
         0.6, -0.55,
         0.55, -0.45,
         0.45, -0.45,
+
+        0.35, -0.45,
+        0.4, -0.55,
+        0.35, -0.65,
+
+        0.6, -0.55,
+        0.65, -0.45,
+        0.65, -0.65,
     ];
 
     var buffer = gl.createBuffer();
@@ -213,11 +229,15 @@ function main() {
     gl.drawArrays(gl.TRIANGLE_FAN, 69, 7);
     gl.drawArrays(gl.TRIANGLE_FAN, 76, 7);
     gl.drawArrays(gl.TRIANGLE_FAN, 83, 6);
+    gl.drawArrays(gl.TRIANGLE_FAN, 89, 3);
+    gl.drawArrays(gl.TRIANGLE_FAN, 92, 3);
 
-    gl.drawArrays(gl.TRIANGLE_FAN, 89, 6);
     gl.drawArrays(gl.TRIANGLE_FAN, 95, 6);
     gl.drawArrays(gl.TRIANGLE_FAN, 101, 6);
     gl.drawArrays(gl.TRIANGLE_FAN, 107, 6);
     gl.drawArrays(gl.TRIANGLE_FAN, 113, 6);
+    gl.drawArrays(gl.TRIANGLE_FAN, 119, 6);
+    gl.drawArrays(gl.TRIANGLE_FAN, 125, 3);
+    gl.drawArrays(gl.TRIANGLE_FAN, 128, 3);
     
 }
