@@ -2,82 +2,64 @@ function main() {
     var kanvas = document.getElementById("kanvas");
     var gl = kanvas.getContext("webgl");
 
-    var vertices1 = [
+    var vertices = [
+        //1
         -0.5, 0.9,
         -0.55, 0.8,
         -0.55, 0.55,
         -0.5, 0.45,
         -0.45, 0.55,
         -0.45, 0.8,
-    ];
-    
-    var vertices2 = [
+
         -0.5, 0.45,
         -0.55, 0.35,
         -0.55, 0.1,
         -0.5, 0.0,
         -0.45, 0.1,
         -0.45, 0.35,
-    ];
 
-    var vertices3 = [
+        //8
         0.4, 0.9,
         0.45, 0.8,
         0.45, 0.55,
         0.4, 0.45,
         0.35, 0.55,
         0.35, 0.8,
-    ];
 
-    var vertices4 = [
         0.4, 0.45,
         0.45, 0.35,
         0.45, 0.1,
         0.4, 0.0,
         0.35, 0.1,
         0.35, 0.35,
-    ];
 
-    var vertices5 = [
         0.6, 0.9,
         0.65, 0.8,
         0.65, 0.55,
         0.6, 0.45,
         0.55, 0.55,
         0.55, 0.8,
-    ];
 
-    var vertices6 = [
         0.6, 0.45,
         0.65, 0.35,
         0.65, 0.1,
         0.6, 0.0,
         0.55, 0.1,
         0.55, 0.35,
-    ];
 
-    var vertices7 = [
         0.4, 0.9,
         0.45, 0.8,
         0.55, 0.8,
         0.6, 0.9,
-        0.55, 1.0,
-        0.45, 1.0,
-    ];
 
-    var vertices8 = [
         0.4, 0.45,
         0.45, 0.35,
         0.55, 0.35,
         0.6, 0.45,
         0.55, 0.55,
         0.45, 0.55,
-    ];
 
-    var vertices9 = [
         0.4, 0.0,
-        0.45, -0.1,
-        0.55, -0.1,
         0.6, 0.0,
         0.55, 0.1,
         0.45, 0.1,
@@ -85,7 +67,7 @@ function main() {
 
     var buffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices9), gl.STATIC_DRAW);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
 
     // Vertex shader
     var vertexShaderCode =  `
@@ -132,5 +114,23 @@ function main() {
     //            Merah     Hijau   Biru    Transparansi
     gl.clear(gl.COLOR_BUFFER_BIT);
 
-    gl.drawArrays(gl.TRIANGLE_FAN, 0, 6);
+    gl.drawArrays(gl.LINE_LOOP, 0, 6);
+    gl.drawArrays(gl.LINES, 6, 6);
+    gl.drawArrays(gl.LINE_LOOP, 6, 6);
+    gl.drawArrays(gl.LINES, 6, 6);
+
+    gl.drawArrays(gl.LINE_LOOP, 12, 6);
+    gl.drawArrays(gl.LINES, 6, 6);
+    gl.drawArrays(gl.LINE_LOOP, 18, 6);
+    gl.drawArrays(gl.LINES, 6, 6);
+    gl.drawArrays(gl.LINE_LOOP, 24, 6);
+    gl.drawArrays(gl.LINES, 6, 6);
+    gl.drawArrays(gl.LINE_LOOP, 30, 6);
+    gl.drawArrays(gl.LINES, 6, 6);
+    gl.drawArrays(gl.LINE_LOOP, 36, 4);
+    gl.drawArrays(gl.LINES, 4, 4);
+    gl.drawArrays(gl.LINE_LOOP, 40, 6);
+    gl.drawArrays(gl.LINES, 6, 6);
+    gl.drawArrays(gl.LINE_LOOP, 46, 4);
+    gl.drawArrays(gl.LINES, 4, 4);
 }
