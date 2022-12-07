@@ -368,6 +368,12 @@ function main() {
       8, 9, 10, 8, 10,
     ];
 
+    var box = [
+      0.0, 0.0, 0.0, 0, 0, 0,
+    ]
+    var boxIndice = [
+      0, 1, 2, 3, 4, 5
+    ];
   
     var objects = [
       {
@@ -531,6 +537,13 @@ function main() {
         length: 10,
         type: gl.TRIANGLE_FAN,
       },
+      {
+        name: 'Box',
+        vertices: box,
+        indices: boxIndice,
+        length: 4,
+        type: gl.TRIANGLE_FAN,
+      }
     ]
   
     var vertexShaderCode = `
